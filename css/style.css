@@ -1,0 +1,147 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Tilt+Warp&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  color: #14213d;
+}
+
+/* Header */
+header {
+  background-color: white;
+  box-shadow: 0rem 0.1rem 0.2rem grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.5rem;
+  padding-inline: 3rem;
+  position: sticky;
+  width: 100%;
+  height: 5em;
+}
+
+/* Link Logo */
+header > a {
+  font-family: "Tilt Warp", sans-serif;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+/* Navigation */
+.nav-list ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-list ul li a {
+  text-decoration: none;
+  font-weight: bolder;
+  margin-inline: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.nav-list ul li a:hover {
+  border-radius: 1rem;
+  background-color: #14213d;
+  color: white;
+}
+.nav-list ul li a:active {
+  border-radius: 1rem;
+  border-style: outset;
+  background-color: white;
+  color: #14213d;
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+  display: none;
+}
+
+/* Close Button */
+#closebtn {
+  display: none;
+}
+
+/* ---------Mobile--------- */
+@media (max-width: 640px) {
+  /* Link Logo */
+  header > a {
+    font-size: xx-large;
+    margin-inline: auto;
+  }
+
+  /* Nav Bar */
+  .nav-list {
+    display: block;
+    position: fixed;
+    inset-inline-start: -40em;
+    inset-block-start: 5em;
+    z-index: -999;
+    width: 100%;
+    height: 100vh;
+    background-color: #14213d;
+    opacity: 98%;
+  }
+
+  .nav-list-active {
+    inset-inline-start: 0;
+    transition: all 0.5s;
+  }
+  .nav-list-active ul {
+    display: flex;
+    flex-direction: column;
+    margin-block: 4em;
+  }
+  .nav-list-active ul li {
+    margin-inline: auto;
+    margin-block: 1.5rem;
+  }
+  .nav-list-active ul li a {
+    color: white;
+  }
+  .nav-list-active ul li a:hover {
+    border: none;
+    color: white;
+    font-size: larger;
+  }
+  .nav-list-active ul li a:active {
+    border-radius: 1rem;
+    background-color: white;
+    color: #14213d;
+  }
+
+  #hamburger-menu {
+    display: block;
+    position: fixed;
+    inset-inline-end: 2em;
+    z-index: 999;
+    scale: 100%;
+  }
+
+  #hamburger-menu.hamburger-active {
+    scale: 0%;
+    transition: 0.5s;
+  }
+
+  #closebtn {
+    display: block;
+    position: fixed;
+    inset-inline-end: 2em;
+    z-index: 998;
+    scale: 0%;
+  }
+
+  #closebtn.active {
+    scale: 100%;
+    transition: 0.5s;
+  }
+}
+
+/* ---------Tablet--------- */
+@media (max-width: 768px) {
+  .nav-list ul li a {
+    margin-inline: 0.1rem;
+  }
+}
