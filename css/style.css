@@ -10,7 +10,7 @@
   color: #14213d;
 }
 
-/* Header */
+/* Header Start*/
 header {
   background-color: white;
   box-shadow: 0rem 0.1rem 0.2rem grey;
@@ -63,6 +63,19 @@ header > a {
 #closebtn {
   display: none;
 }
+/* Header End */
+
+/* Main Start */
+/* Article */
+.hero-section {
+  padding-block: 5rem;
+  padding-inline: 3rem;
+}
+.hero-section h1,
+h2 {
+}
+
+/* Main End */
 
 /* ---------Mobile--------- */
 @media (max-width: 640px) {
@@ -103,8 +116,7 @@ header > a {
   }
   .nav-list-active ul li a:hover {
     border: none;
-    color: white;
-    font-size: larger;
+    color: skyblue;
   }
   .nav-list-active ul li a:active {
     border-radius: 1rem;
@@ -112,12 +124,14 @@ header > a {
     color: #14213d;
   }
 
+  /* Hamburger Menu */
   #hamburger-menu {
     display: block;
     position: fixed;
     inset-inline-end: 2em;
     z-index: 999;
     scale: 100%;
+    font-size: large;
   }
 
   #hamburger-menu.hamburger-active {
@@ -125,12 +139,14 @@ header > a {
     transition: 0.5s;
   }
 
+  /* Close Button */
   #closebtn {
     display: block;
     position: fixed;
     inset-inline-end: 2em;
     z-index: 998;
     scale: 0%;
+    font-size: large;
   }
 
   #closebtn.active {
