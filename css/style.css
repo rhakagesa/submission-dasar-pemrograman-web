@@ -19,9 +19,11 @@ header {
   align-items: center;
   padding-block: 1.5rem;
   padding-inline: 3rem;
-  position: sticky;
+  position: fixed;
   width: 100%;
   height: 5em;
+  inset-inline-start: 0;
+  inset-block-start: 0;
 }
 
 /* Link Logo */
@@ -67,18 +69,69 @@ header > a {
 
 /* Main Start */
 /* Article */
+main {
+  margin-block-start: 5em;
+}
 .hero-section {
   padding-block: 5rem;
   padding-inline: 3rem;
+  display: flex;
+  align-items: center;
 }
-.hero-section h1,
+
+/* Greeting Section */
+.hero-section div {
+  flex: 1;
+}
+.hero-section div h1,
 h2 {
+  font-family: "Tilt Warp", sans-serif;
+  font-size: xx-large;
+}
+.hero-section div > p {
+  font-size: x-large;
+  font-weight: 500;
+  margin-block-start: 1rem;
+  text-align: left;
+}
+.hero-section div > p > span > img {
+  width: 2rem;
+  margin-block-end: -0.3rem;
+  margin-inline: 0.3rem;
+}
+.hero-section div > p > span {
+  font-family: "Tilt Warp", sans-serif;
+  font-size: x-large;
+  color: green;
+}
+
+/* Sosial Media Logo */
+.social-media li {
+  list-style-type: none;
+  display: inline;
+  margin-inline: 0.5rem;
+}
+.social-media li a {
+  text-decoration: none;
+}
+.social-media li a i {
+  font-size: xx-large;
+}
+
+/* Hero Section */
+.hero-section aside {
+  flex: 1;
+}
+.hero-section aside p {
+  font-size: 300px;
+  text-align: center;
 }
 
 /* Main End */
 
 /* ---------Mobile--------- */
 @media (max-width: 640px) {
+  /* Header Start */
   /* Link Logo */
   header > a {
     font-size: xx-large;
@@ -153,11 +206,41 @@ h2 {
     scale: 100%;
     transition: 0.5s;
   }
+  /* Header End */
+
+  /* Main Start*/
+  /* Greeting Section */
+
+  .hero-section div h1,
+  h2 {
+    font-size: x-large;
+  }
+  .hero-section div > p {
+    font-size: large;
+    text-align: justify;
+  }
+  .hero-section div > p > span > img {
+    width: 1rem;
+    margin-block-end: -0.1rem;
+  }
+  .hero-section div > p > span {
+    font-size: medium;
+  }
+
+  /* Sosial Media Logo */
+  .social-media {
+    margin-inline: 0rem;
+    margin-block: 0rem;
+  }
+  /* Main End */
 }
 
 /* ---------Tablet--------- */
 @media (max-width: 768px) {
   .nav-list ul li a {
     margin-inline: 0.1rem;
+  }
+  .hero-section {
+    flex-direction: column;
   }
 }
