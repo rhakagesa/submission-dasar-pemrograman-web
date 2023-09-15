@@ -68,15 +68,18 @@ header > a {
 /* Header End */
 
 /* Main Start */
-/* Article */
 main {
-  margin-block-start: 5em;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
 }
+/* Article Hero Section*/
 .hero-section {
   padding-block: 5rem;
   padding-inline: 3rem;
   display: flex;
   align-items: center;
+  height: 100vh;
 }
 
 /* Greeting Section */
@@ -126,6 +129,68 @@ h2 {
   font-size: 300px;
   text-align: center;
 }
+/* Article Hero Section End */
+
+/* Article About Me Start*/
+.about-me {
+  padding-block: 5rem;
+  padding-inline: 3rem;
+  background: #14213d;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  width: 100vw;
+}
+.about-me h1 {
+  font-family: "Tilt Warp", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: xx-large;
+  margin-block-start: -1em;
+  margin-block-end: 2em;
+}
+.about-me p {
+  text-align: center;
+  font-size: larger;
+  color: white;
+  line-height: 2em;
+}
+/* Article About Me End*/
+
+/* Article Experience Start */
+.experience {
+  margin-block-start: -1em;
+  padding-block: 5rem;
+  padding-inline: 3rem;
+  background: white;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  width: 100vw;
+}
+.experience h1 {
+  font-family: "Tilt Warp", sans-serif;
+  color: #14213d;
+  text-align: center;
+  font-size: xx-large;
+  margin-block-start: -1em;
+  margin-block-end: 2em;
+}
+.experience > ul > li {
+  font-size: larger;
+  font-weight: bold;
+  color: #14213d;
+  margin-block: 1rem;
+}
+.experience > ul > li > p {
+  font-size: large;
+  font-weight: bold;
+  color: #14213d;
+  margin-block: 0.5rem;
+}
+.experience > ul > li > ul > li {
+  list-style-type: circle;
+  margin-inline-start: 1rem;
+}
+/* Article Experience End */
 
 /* Main End */
 
@@ -242,5 +307,14 @@ h2 {
   }
   .hero-section {
     flex-direction: column;
+  }
+  .about-me {
+    margin-block-start: 10em;
+  }
+  .about-me h1 {
+    font-size: x-large;
+  }
+  .about-me p {
+    font-size: medium;
   }
 }
