@@ -12,8 +12,8 @@
 
 /* Header Start*/
 header {
-  background-color: white;
-  box-shadow: 0rem 0.1rem 0.2rem grey;
+  background-color: #fca311ff;
+  box-shadow: 0rem 0.1rem 0.2rem black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,8 +29,9 @@ header {
 /* Link Logo */
 header > a {
   font-family: "Tilt Warp", sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
   text-decoration: none;
+  color: white;
 }
 
 /* Navigation */
@@ -39,10 +40,12 @@ header > a {
   list-style-type: none;
 }
 .nav-list ul li a {
+  font-size: large;
   text-decoration: none;
   font-weight: bolder;
   margin-inline: 0.5rem;
   padding: 0.5rem 1rem;
+  color: white;
 }
 .nav-list ul li a:hover {
   border-radius: 1rem;
@@ -106,6 +109,14 @@ h2 {
   font-family: "Tilt Warp", sans-serif;
   font-size: x-large;
   color: green;
+}
+.hero-section > aside {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+.hero-section > aside > img {
+  width: 50%;
 }
 
 /* Sosial Media Logo */
@@ -199,14 +210,14 @@ h2 {
 .project {
   padding-block: 5rem;
   padding-inline: 3rem;
-  background: white;
+  background: #fca311ff;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   width: 100vw;
 }
 .project > h1 {
   font-family: "Tilt Warp", sans-serif;
-  color: #fca311ff;
+  color: white;
   text-align: center;
   font-size: xx-large;
   margin-block-start: -1em;
@@ -216,14 +227,7 @@ h2 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.web-dev {
-  justify-content: center;
-}
-.design {
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .web-dev > h2,
@@ -238,8 +242,8 @@ h2 {
 .first-web,
 .first-design {
   border-radius: 1rem;
-  border: 0.1rem solid grey;
-  box-shadow: 0.1rem 0.1rem 0.2rem #fca311ff;
+  /* border: 0.1rem solid grey; */
+  box-shadow: 0.3rem 0.3rem 0.3rem yellow;
   background-color: white;
   width: fit-content;
   height: fit-content;
@@ -269,7 +273,8 @@ ul {
 .first-web > h4,
 .first-design > h4 {
   font-weight: bold;
-  margin-block-start: 2rem;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0rem;
 }
 .first-web > ul > li,
 .first-design > ul > li {
@@ -279,6 +284,20 @@ ul {
 .first-web > ul > li > i {
   font-size: xx-large;
 }
+.first-web > span,
+.first-design > span {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+  justify-content: end;
+  align-items: end;
+  margin-block-start: -2rem;
+}
+.first-web > span > i,
+.first-design > span > i {
+  margin-inline: 0.2rem;
+}
+
 .first-design > ul > li > img {
   width: 30px;
 }
@@ -418,16 +437,22 @@ ul {
   }
   .hero-section {
     flex-direction: column;
-    margin-block-end: 5rem;
+    margin-block-start: 10rem;
+    margin-block-end: 6rem;
+    justify-content: center;
+  }
+  .hero-section > aside {
+    justify-content: center;
+  }
+  .hero-section > aside > img {
+    width: 40%;
   }
   .project > div {
     flex-direction: column;
+    align-items: center;
   }
   .design {
     margin-block-start: 5em;
-  }
-  .design > h2 {
-    text-align: left;
   }
 }
 /* ---------Laptop--------- */
