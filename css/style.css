@@ -457,6 +457,9 @@ ul {
 }
 /* ---------Laptop--------- */
 @media (max-width: 1024px) {
+  .hero-section > aside > img {
+    width: 70%;
+  }
   .first-web > img,
   .first-design > img {
     width: 300px;
