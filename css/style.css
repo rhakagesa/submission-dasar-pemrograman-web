@@ -71,7 +71,7 @@ header > a {
 main {
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
+  width: 100vw;
 }
 /* Article Hero Section*/
 .hero-section {
@@ -131,7 +131,7 @@ h2 {
 }
 /* Article Hero Section End */
 
-/* Article About Me Start*/
+/* About Me Start*/
 .about-me {
   padding-block: 5rem;
   padding-inline: 3rem;
@@ -154,9 +154,9 @@ h2 {
   color: white;
   line-height: 2em;
 }
-/* Article About Me End*/
+/* About Me End*/
 
-/* Article Experience Start */
+/* Experience Start */
 .experience {
   margin-block-start: -1em;
   padding-block: 5rem;
@@ -189,9 +189,97 @@ h2 {
 .experience > ul > li > ul > li {
   list-style-type: circle;
   margin-inline-start: 1rem;
+  font-size: medium;
+  font-weight: 500;
+  color: #14213d;
 }
-/* Article Experience End */
+/* Experience End */
 
+/* Project Start */
+.project {
+  padding-block: 5rem;
+  padding-inline: 3rem;
+  background: white;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  width: 100vw;
+}
+.project > h1 {
+  font-family: "Tilt Warp", sans-serif;
+  color: #fca311ff;
+  text-align: center;
+  font-size: xx-large;
+  margin-block-start: -1em;
+  margin-block-end: 2em;
+}
+.project > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.web-dev,
+.design {
+  width: 100%;
+  height: 100%;
+}
+
+.web-dev > h2,
+.design > h2 {
+  font-family: "Tilt Warp", sans-serif;
+  color: #14213d;
+  font-size: x-large;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.first-web,
+.first-design {
+  border-radius: 1rem;
+  border: 0.1rem solid grey;
+  box-shadow: 0.1rem 0.1rem 0.2rem #fca311ff;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+}
+.first-web > h3,
+.first-design > h3 {
+  font-size: larger;
+  font-weight: bold;
+  margin-block: 0.5rem;
+}
+.first-web > img,
+.first-design > img {
+  width: 430px;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+}
+.first-design > img {
+  height: 235px;
+}
+.first-web > h4,
+ul,
+.first-design > h4,
+ul {
+  align-self: flex-start;
+}
+.first-web > h4,
+.first-design > h4 {
+  font-weight: bold;
+  margin-block-start: 2rem;
+}
+.first-web > ul > li,
+.first-design > ul > li {
+  display: inline;
+  list-style-type: none;
+}
+.first-web > ul > li > i {
+  font-size: xx-large;
+}
+.first-design > ul > li > img {
+  width: 30px;
+}
+/* Project End */
 /* Main End */
 
 /* ---------Mobile--------- */
@@ -251,7 +339,6 @@ h2 {
     scale: 100%;
     font-size: large;
   }
-
   #hamburger-menu.hamburger-active {
     scale: 0%;
     transition: 0.5s;
@@ -266,7 +353,6 @@ h2 {
     scale: 0%;
     font-size: large;
   }
-
   #closebtn.active {
     scale: 100%;
     transition: 0.5s;
@@ -275,7 +361,6 @@ h2 {
 
   /* Main Start*/
   /* Greeting Section */
-
   .hero-section div h1,
   h2 {
     font-size: x-large;
@@ -297,6 +382,29 @@ h2 {
     margin-inline: 0rem;
     margin-block: 0rem;
   }
+
+  /* About Me and Experience */
+  .about-me h1,
+  .experience h1 {
+    font-size: x-large;
+  }
+  .about-me p {
+    font-size: medium;
+  }
+
+  /* Work Section */
+  .first-web,
+  .first-design {
+    width: 100%;
+    height: fit-content;
+  }
+  .first-web > img {
+    width: 100%;
+  }
+  .first-design > img {
+    width: 100%;
+    height: fit-content;
+  }
   /* Main End */
 }
 
@@ -307,14 +415,25 @@ h2 {
   }
   .hero-section {
     flex-direction: column;
+    margin-block-end: 5rem;
   }
-  .about-me {
-    margin-block-start: 10em;
+  .project > div {
+    flex-direction: column;
   }
-  .about-me h1 {
-    font-size: x-large;
+  .design {
+    margin-block-start: 5em;
   }
-  .about-me p {
-    font-size: medium;
+  .design > h2 {
+    text-align: left;
+  }
+}
+/* ---------Laptop--------- */
+@media (max-width: 1024px) {
+  .first-web > img,
+  .first-design > img {
+    width: 300px;
+  }
+  .first-design > img {
+    height: 166px;
   }
 }
