@@ -9,6 +9,9 @@
   font-size: medium;
   color: #14213d;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Header Start*/
 header {
