@@ -18,15 +18,15 @@
     <!-- Header Start -->
     <header>
       <!-- Link Logo -->
-      <a href="#">rhakagesa</a>
+      <a href="#">rhakagesa<sup>&#174</sup></a>
 
       <!-- Navigation -->
       <nav id="nav-list" class="nav-list">
         <ul>
           <li><a href="#about-me">About Me</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Project</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -132,7 +132,7 @@
         </ul>
       </article>
 
-      <article class="project">
+      <article id="project" class="project">
         <h1>Project</h1>
         <div>
           <div class="web-dev">
@@ -146,7 +146,7 @@
                 <li><i class="fab fa-css3-alt" style="color: #2965f1"></i></li>
                 <li><i class="fab fa-js" style="color: #f0db4f"></i></li>
               </ul>
-              <span>details<i class="fas fa-angle-double-right"></i></span>
+              <button>details<i class="fas fa-angle-double-right"></i></button>
             </div>
           </div>
           <div class="design">
@@ -161,13 +161,62 @@
                 <li><img src="assets/inkscape.svg" alt="" /></li>
               </ul>
 
-              <span>details<i class="fas fa-angle-double-right"></i></span>
+              <button>details<i class="fas fa-angle-double-right"></i></button>
             </div>
           </div>
         </div>
       </article>
     </main>
     <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <article id="contact" class="contact">
+        <h1>Contact</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, nisi!
+        </p>
+        <div>
+          <ul class="contact-link">
+            <li>
+              <a href="#"
+                ><i class="fab fa-facebook"></i></a
+              ><span>Rhaka Gemilang</span>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a
+              ><span>@suenengnjajan</span>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a
+              ><span>Rhaka Gemilang</span>
+            </li>
+            <li>
+              <a href="#"><i class="far fa-envelope"></i></a
+              ><span>rhakagesa@gmail.com</span>
+            </li>
+          </ul>
+          <aside>
+            <form action="post">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </aside>
+        </div>
+      </article>
+      <p>	&#169Created by Rhaka Gemilang</p>
+    </footer>
+    <!-- Footer End -->
     <!-- My Script -->
     <script src="script/script.js"></script>
   </body>

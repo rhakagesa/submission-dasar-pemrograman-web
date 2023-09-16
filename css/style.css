@@ -32,6 +32,15 @@ header > a {
   font-size: xx-large;
   text-decoration: none;
   color: white;
+  border-radius: 2rem;
+  background-color: #14213d;
+  padding: 0.3rem 1rem 0.4rem 1.5rem;
+}
+header > a > sup {
+  font-family: "Tilt Warp", sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: white;
 }
 
 /* Navigation */
@@ -82,7 +91,7 @@ main {
   padding-inline: 3rem;
   display: flex;
   align-items: center;
-  height: 100vh;
+  width: 100vw;
 }
 
 /* Greeting Section */
@@ -117,6 +126,9 @@ h2 {
 }
 .hero-section > aside > img {
   width: 50%;
+  border-radius: 48%;
+  background-color: #14213d;
+  padding-top: 0.5rem;
 }
 
 /* Sosial Media Logo */
@@ -214,14 +226,20 @@ h2 {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   width: 100vw;
+  margin-block-start: -1rem;
 }
 .project > h1 {
   font-family: "Tilt Warp", sans-serif;
   color: white;
-  text-align: center;
   font-size: xx-large;
   margin-block-start: -1em;
   margin-block-end: 2em;
+  margin-inline: auto;
+  border-radius: 2rem;
+  background-color: #14213d;
+  padding-inline: 0.8rem;
+  padding-block: 0.3rem;
+  width: max-content;
 }
 .project > div {
   width: 100%;
@@ -237,6 +255,15 @@ h2 {
   font-size: x-large;
   padding-bottom: 1rem;
   text-align: center;
+  background-color: white;
+  border-radius: 2rem;
+  width: max-content;
+  padding-inline: 0.8rem;
+  padding-block: 0.3rem;
+  margin-block: 0.5rem;
+  margin-inline: auto;
+  border-style: solid;
+  border-color: #14213d;
 }
 
 .first-web,
@@ -248,6 +275,8 @@ h2 {
   width: fit-content;
   height: fit-content;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .first-web > h3,
 .first-design > h3 {
@@ -284,17 +313,21 @@ ul {
 .first-web > ul > li > i {
   font-size: xx-large;
 }
-.first-web > span,
-.first-design > span {
+.first-web > button,
+.first-design > button {
   display: flex;
   font-size: medium;
   font-weight: bold;
   justify-content: end;
   align-items: end;
-  margin-block-start: -2rem;
+  align-self: flex-end;
+  margin-block-start: -2em;
+  background-color: white;
+  color: #14213d;
+  border: none;
 }
-.first-web > span > i,
-.first-design > span > i {
+.first-web > button > i,
+.first-design > button > i {
   margin-inline: 0.2rem;
 }
 
@@ -302,7 +335,87 @@ ul {
   width: 30px;
 }
 /* Project End */
+
 /* Main End */
+
+/* Footer Start*/
+.contact {
+  margin-block-start: 5rem;
+  padding-block: 1.5rem;
+  padding-inline: 3rem;
+}
+.contact > h1 {
+  font-family: "Tilt Warp", sans-serif;
+  color: #14213d;
+  font-size: xx-large;
+  text-align: center;
+  margin-block-start: -1em;
+  margin-block-end: 2em;
+  margin-inline: auto;
+  border-radius: 2rem;
+}
+.contact p {
+  text-align: center;
+  font-size: larger;
+  margin-block-end: 3rem;
+}
+.contact div {
+  display: flex;
+  justify-content: space-around;
+}
+.contact-link > li {
+  list-style-type: none;
+  margin-block: 1rem;
+  display: flex;
+  align-items: center;
+}
+.contact-link li > a {
+  text-decoration: none;
+}
+.contact-link li > a > i {
+  font-size: x-large;
+  margin-inline-end: 0.5rem;
+}
+.contact div > aside > form {
+  display: flex;
+  flex-direction: column;
+}
+.contact div > aside > form > label {
+  margin-block: 0.3rem;
+}
+.contact div > aside > form > input {
+  border: 1px solid #14213d;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+.contact div > aside > form > textarea,
+button {
+  border-radius: 1rem;
+  border: 1px solid #14213d;
+}
+.contact div > aside > form > button {
+  margin-block: 0.5rem;
+  padding-block: 0.5rem;
+  background-color: #14213d;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer > p {
+  align-self: center;
+  background-color: #fca311ff;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding-block: 1rem;
+}
 
 /* ---------Mobile--------- */
 @media (max-width: 640px) {
@@ -382,7 +495,12 @@ ul {
   /* Header End */
 
   /* Main Start*/
+
   /* Greeting Section */
+  .hero-section {
+    margin-block-start: 4rem;
+    margin-block-end: 0rem;
+  }
   .hero-section div h1,
   h2 {
     font-size: x-large;
@@ -398,6 +516,10 @@ ul {
   .hero-section div > p > span {
     font-size: medium;
   }
+  .hero-section aside > img {
+    object-fit: contain;
+    object-position: center;
+  }
 
   /* Sosial Media Logo */
   .social-media {
@@ -407,8 +529,12 @@ ul {
 
   /* About Me and Experience */
   .about-me h1,
-  .experience h1 {
+  .experience h1,
+  .project h1 {
     font-size: x-large;
+  }
+  .project h2 {
+    font-size: larger;
   }
   .about-me p {
     font-size: medium;
@@ -427,25 +553,30 @@ ul {
     width: 100%;
     height: fit-content;
   }
+
   /* Main End */
 }
 
 /* ---------Tablet--------- */
+@media (min-width: 640px) {
+  .hero-section {
+    margin-block-start: 17rem;
+    margin-block-end: 15rem;
+  }
+}
 @media (max-width: 768px) {
   .nav-list ul li a {
     margin-inline: 0.1rem;
   }
   .hero-section {
     flex-direction: column;
-    margin-block-start: 10rem;
-    margin-block-end: 6rem;
     justify-content: center;
   }
   .hero-section > aside {
     justify-content: center;
   }
   .hero-section > aside > img {
-    width: 40%;
+    margin-block-start: 2rem;
   }
   .project > div {
     flex-direction: column;
@@ -454,8 +585,22 @@ ul {
   .design {
     margin-block-start: 5em;
   }
+  /* Contact Section*/
+  .contact > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact > div > ul {
+    align-self: center;
+    margin-block-end: 2rem;
+  }
 }
 /* ---------Laptop--------- */
+@media (min-width: 768px) {
+  .hero-section {
+    margin-block: 5rem;
+  }
+}
 @media (max-width: 1024px) {
   .hero-section > aside > img {
     width: 70%;
