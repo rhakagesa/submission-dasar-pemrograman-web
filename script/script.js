@@ -22,9 +22,9 @@ document.onclick = function (pointer) {
     pointer.target.id !== "nav-list" &&
     pointer.target.id !== "hamburger-menu"
   ) {
-    navbar.classList.toggle("nav-list-active");
-    hamburgerMenu.classList.toggle("hamburger-active");
-    closeButton.classList.toggle("active");
+    navbar.classList.remove("nav-list-active");
+    hamburgerMenu.classList.remove("hamburger-active");
+    closeButton.classList.remove("active");
   }
 };
 
