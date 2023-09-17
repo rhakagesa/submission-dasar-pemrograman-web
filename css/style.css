@@ -91,7 +91,7 @@ main {
 /* Article Hero Section*/
 .hero-section {
   padding-block: 5rem;
-  padding-inline: 3rem;
+  padding-inline: 10rem;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -101,10 +101,10 @@ main {
 .hero-section div {
   flex: 1;
 }
-.hero-section div h1,
-h2 {
+.hero-section div h1 {
   font-family: "Tilt Warp", sans-serif;
   font-size: xx-large;
+  text-align: left;
 }
 .hero-section div > p {
   font-size: x-large;
@@ -122,6 +122,14 @@ h2 {
   font-size: x-large;
   color: green;
 }
+
+.hero-section div > p > .webs {
+  color: #14213d;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
 .hero-section > aside {
   flex: 1;
   display: flex;
@@ -134,16 +142,13 @@ h2 {
   padding-top: 0.5rem;
 }
 
-/* Sosial Media Logo */
-.social-media li {
+/* Fundamental Web Logo */
+.fundamental-web-logo li {
   list-style-type: none;
   display: inline;
   margin-inline: 0.5rem;
 }
-.social-media li a {
-  text-decoration: none;
-}
-.social-media li a i {
+.fundamental-web-logo li i {
   font-size: xx-large;
 }
 
@@ -160,7 +165,7 @@ h2 {
 /* About Me Start*/
 .about-me {
   padding-block: 5rem;
-  padding-inline: 3rem;
+  padding-inline: 10rem;
   background: #14213d;
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
@@ -180,13 +185,22 @@ h2 {
   color: white;
   line-height: 2em;
 }
+.about-me p a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+}
+.about-me p a:hover {
+  text-shadow: 0px 0px 5px white;
+}
 /* About Me End*/
 
 /* Experience Start */
 .experience {
   margin-block-start: -1em;
   padding-block: 5rem;
-  padding-inline: 3rem;
+  padding-inline: 10rem;
   background: white;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -224,7 +238,7 @@ h2 {
 /* Project Start */
 .project {
   padding-block: 5rem;
-  padding-inline: 3rem;
+  padding-inline: 10rem;
   background: #fca311ff;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -250,7 +264,18 @@ h2 {
   display: flex;
   justify-content: space-around;
 }
-
+.web-dev {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .web-dev > h2,
 .design > h2 {
   font-family: "Tilt Warp", sans-serif;
@@ -272,9 +297,8 @@ h2 {
 .first-web,
 .first-design {
   border-radius: 1rem;
-  /* border: 0.1rem solid grey; */
   background-color: white;
-  width: fit-content;
+  width: 80%;
   height: fit-content;
   padding: 20px;
   display: flex;
@@ -282,12 +306,12 @@ h2 {
   border: 0.1rem solid #14213d;
 }
 .first-web:hover {
-  transition: all 0.5s;
-  transform: translateY(-0.5rem);
+  outline: #14213d;
+  box-shadow: 0 0 0.7rem #14213d;
 }
 .first-design:hover {
-  transition: all 0.5s;
-  transform: translateY(-0.4rem);
+  outline: #14213d;
+  box-shadow: 0 0 0.7rem #14213d;
 }
 .first-web:active {
   outline: none;
@@ -308,19 +332,31 @@ h2 {
 }
 .first-web > img,
 .first-design > img {
-  width: 430px;
+  width: 100%;
   border-radius: 1rem;
   border: 0.1rem solid black;
 }
-.first-design > img {
-  height: 235px;
+
+.datecreate {
+  font-size: small;
+  font-style: italic;
 }
+
+.first-web > p,
+.first-design > p {
+  text-align: justify;
+  margin-block-start: 0.5rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
 .first-web > h4,
-ul,
+.tools,
 .first-design > h4,
-ul {
+.tools {
   align-self: flex-start;
 }
+
 .first-web > h4,
 .first-design > h4 {
   font-weight: bold;
@@ -335,8 +371,8 @@ ul {
 .first-web > ul > li > i {
   font-size: xx-large;
 }
-.first-web > button,
-.first-design > button {
+.first-web > a,
+.first-design > a {
   display: flex;
   font-size: medium;
   font-weight: bold;
@@ -347,7 +383,9 @@ ul {
   background-color: white;
   color: #14213d;
   border: none;
+  text-decoration: none;
 }
+
 .first-web > button > i,
 .first-design > button > i {
   margin-inline: 0.2rem;
@@ -364,7 +402,7 @@ ul {
 .contact {
   margin-block-start: 5rem;
   padding-block: 1.5rem;
-  padding-inline: 3rem;
+  padding-inline: 10rem;
 }
 .contact > h1 {
   font-family: "Tilt Warp", sans-serif;
@@ -542,7 +580,8 @@ footer > p {
   h2 {
     font-size: x-large;
   }
-  .hero-section div > p {
+  .hero-section div > p,
+  .hero-section div > p > .webs {
     font-size: large;
     text-align: justify;
   }
@@ -559,7 +598,7 @@ footer > p {
   }
 
   /* Sosial Media Logo */
-  .social-media {
+  .fundamental-web-logo {
     margin-inline: 0rem;
     margin-block: 0rem;
   }
@@ -567,31 +606,27 @@ footer > p {
   /* About Me and Experience */
   .about-me h1,
   .experience h1,
-  .project h1 {
+  .project h1,
+  .contact h1 {
     font-size: x-large;
   }
   .project h2 {
     font-size: larger;
   }
-  .about-me p {
+  .about-me p,
+  .about-me p a,
+  .contact p {
     font-size: medium;
   }
 
-  /* Work Section */
-  .first-web,
-  .first-design {
-    width: 100%;
-    height: fit-content;
+  /* Padding Set */
+  .hero-section,
+  .about-me,
+  .experience,
+  .project,
+  .contact {
+    padding-inline: 3rem;
   }
-  .first-web > img {
-    width: 100%;
-  }
-  .first-design > img {
-    width: 100%;
-    height: fit-content;
-  }
-
-  /* Main End */
 }
 
 /* ---------Tablet--------- */
@@ -637,16 +672,7 @@ footer > p {
   .hero-section {
     margin-block: 5rem;
   }
-}
-@media (max-width: 1024px) {
-  .hero-section > aside > img {
+  .hero-section aside img {
     width: 70%;
-  }
-  .first-web > img,
-  .first-design > img {
-    width: 300px;
-  }
-  .first-design > img {
-    height: 166px;
   }
 }
