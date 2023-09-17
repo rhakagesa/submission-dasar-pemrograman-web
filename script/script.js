@@ -1,13 +1,15 @@
+// Hamburger Menu
 const navbar = document.querySelector("#nav-list");
 const hamburgerMenu = document.querySelector("#hamburger-menu");
 const closeButton = document.querySelector("#closebtn");
 
+// Toogle Hamburger Menu For Active ClassList Rsponsive Navbar
 hamburgerMenu.addEventListener("click", function () {
   navbar.classList.toggle("nav-list-active");
   hamburgerMenu.classList.toggle("hamburger-active");
   closeButton.classList.toggle("active");
 });
-
+// Toogle for Close Rseponsive Navbar
 closeButton.addEventListener("click", function () {
   navbar.classList.toggle("nav-list-active");
   hamburgerMenu.classList.toggle("hamburger-active");

@@ -263,7 +263,7 @@ h2 {
   width: max-content;
   padding-inline: 0.8rem;
   padding-block: 0.3rem;
-  margin-block: 0.5rem;
+  margin-block: 1rem;
   margin-inline: auto;
   border-style: solid;
   border-color: #14213d;
@@ -273,14 +273,33 @@ h2 {
 .first-design {
   border-radius: 1rem;
   /* border: 0.1rem solid grey; */
-  box-shadow: 0.3rem 0.3rem 0.3rem yellow;
   background-color: white;
   width: fit-content;
   height: fit-content;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border: 0.1rem solid #14213d;
 }
+.first-web:hover {
+  transition: all 0.5s;
+  transform: translateY(-0.5rem);
+}
+.first-design:hover {
+  transition: all 0.5s;
+  transform: translateY(-0.4rem);
+}
+.first-web:active {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 1rem white;
+}
+.first-design:active {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 1rem white;
+}
+
 .first-web > h3,
 .first-design > h3 {
   font-size: larger;
@@ -366,6 +385,9 @@ ul {
   display: flex;
   justify-content: space-around;
 }
+.contact-link {
+  flex-grow: 2;
+}
 .contact-link > li {
   list-style-type: none;
   margin-block: 1rem;
@@ -376,12 +398,18 @@ ul {
   text-decoration: none;
 }
 .contact-link li > a > i {
-  font-size: x-large;
+  font-size: xx-large;
   margin-inline-end: 0.5rem;
+}
+.contact div > aside {
+  flex-grow: 1;
 }
 .contact div > aside > form {
   display: flex;
   flex-direction: column;
+  border: 0.1rem solid #14213d;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 .contact div > aside > form > label {
   margin-block: 0.3rem;
@@ -391,6 +419,12 @@ ul {
   border-radius: 0.5rem;
   padding: 0.3rem;
 }
+.contact div > aside > form > input:focus {
+  outline: none;
+  border-color: #14213d;
+  box-shadow: 0 0 1rem #14213d;
+}
+
 .contact div > aside > form > textarea,
 button {
   border-radius: 1rem;
